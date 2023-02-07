@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>World of Board Games</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tuva Falk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Global.css" />   
+    </head>
+    <body>
+
+        <!--- CONTAINER -->
+        <div class="container">
+
+            <!-- HEADER -->
+            <header class="header">
+                <figure id="logo"><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></figure>
+                <div id="quick_link">
+                    <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken" style="width:32;height:auto;"></i></a></div>
+                    <div class="icon"><a href = "URL"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto" style="width:32;height:auto;"></i></a></div>
+                    <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn" style="width:32;height:auto;"></i></a></div>
+                </div>    
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="menu">
+                <ul>
+                    <li><a href = "URL">Alla spel</a></li>
+                    <li><a href = "Categories.html">Kategorier</a></li>
+                    <li><a href = "URL">Forum</a></li>
+                    <li><a href = "URL">Låna</a></li>
+                    <li><a href = "URL">Loppis</a></li>
+                    <li><a href = "URL">Sök</a></li>
+                </ul>
+                
+                <div><i id="burger"><img src="src/menu.png" alt="menu" style="width:auto;height:auto;"></i></div>
+            </nav>
+
+            <!-- CONTENT -->
+            <!-- TOPLIST -->
+            <section class="toplist">
+                <div class="top_games">
+                    <div class="number_text">1 / 10</div>
+                    <img src="src/loveletter.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">2 / 10</div>
+                    <img src="src/bang.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">3 / 10</div>
+                    <img src="src/catan.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">4 / 10</div>
+                    <img src="src/tapestry.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                  <div class="number_text">5 / 10</div>
+                  <img src="src/7wondersduel.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">6 / 10</div>
+                    <img src="src/onedeckdungeon.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">7 / 10</div>
+                    <img src="src/arkhamhorror.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">8 / 10</div>
+                    <img src="src/houseonthehill.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                  <div class="number_text">9 / 10</div>
+                  <img src="src/wingspan.png" style="height:225px; width:536.25px">
+                </div>
+                <div class="top_games">
+                    <div class="number_text">10 / 10</div>
+                    <img src="src/thecrew.png" style="height:225px; width:536.25px">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- thumbnails -->
+                <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_loveletter.png" style="width:auto" onclick="currentSlide(1)" alt="Love Letter">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_bang.png" style="width:auto" onclick="currentSlide(2)" alt="Bang!">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_catan.png" style="width:auto" onclick="currentSlide(3)" alt="Catan">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_tapestry.png" style="width:auto" onclick="currentSlide(4)" alt="Tapestry">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_7wondersduel.png" style="width:auto" onclick="currentSlide(5)" alt="7 wonders duel">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_onedeckdungeon.png" style="width:auto" onclick="currentSlide(6)" alt="One deck dungeon">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_arkhamhorror.png" style="width:auto" onclick="currentSlide(7)" alt="Arkham Horror">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_houseonthehill.png" style="width:auto" onclick="currentSlide(8)" alt="House on the hill">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_wingspan.png" style="width:auto" onclick="currentSlide(9)" alt="Wingspan">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="src/thumbnail_thecrew.png" style="width:auto" onclick="currentSlide(10)" alt="The crew">
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    // Next/previous controlls
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("top_games");
+                      let dots = document.getElementsByClassName("demo");
+                      let captionText = document.getElementById("caption");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                      captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                </script>
+
+            </section>
+
+            <section class="about">
+                <h1>Om oss</h1> 
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </section>
+
+            <aside class="sale">Erbjudanden</aside>
+
+            <section class="chat">Forum inlägg<br>Forum inlägg<br>Forum inlägg<br>Forum inlägg<br>Forum inlägg<br></section>
+
+            <figure class="extra"><img src="src/color.png" alt="färgscheman" style="max-width:100%;height:auto;"></figure>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                <div id="adress">Hitta oss!</div>
+                <div id="contact">Kontakta oss!</div>
+                <div class="links">Följ oss!</div>
+
+            </footer>
+            
+        <!-- END CONTAINER -->
+        </div>
+    </body>
+</html>
