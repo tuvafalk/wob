@@ -5,89 +5,109 @@
         <meta charset="UTF-8">
         <meta name="author" content="Tuva Falk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="Global.css"/>   
+        <link rel="stylesheet" type="text/css" href="Global.css"/>
     </head>
     <body>
 
-        <!--- CONTAINER -->
-        <div class="container">
+    <!--- CONTAINER -->
+    <div class="container">
 
-            <!-- HEADER -->
-            <header class="header">
-                <figure id="logo"><a href = "Index.html"></i><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></a></figure>
-                <div id="quick_link">
-                    <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken" style="width:32;height:auto;"></i></a></div>
-                    <div class="icon"><a href = "URL"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto" style="width:32;height:auto;"></i></a></div>
-                    <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn" style="width:32;height:auto;"></i></a></div>
-                </div>
-            </header>
+        <!-- HEADER -->
+        <header class="header">
+          <figure id="logo"><a href = "Index.html"></i><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></a></figure>
+          <div id="quick_link">
+              <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken"></i></a></div>
+              <div class="icon"><a href = "URL"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto"></i></a></div>
+              <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn"></i></a></div>
+          </div>
+        </header>
 
-            <!-- NAVIGATION -->
-            <nav class="menu">
-                <ul>
-                    <li><a href = "URL">Alla spel</a></li>
-                    <li><a href = "URL">Kategorier</a></li>
-                    <li><a href = "URL">Forum</a></li>
-                    <li><a href = "URL">Låna</a></li>
-                    <li><a href = "URL">Loppis</a></li>
-                    <li style="float: right"><a href = "URL">Sök</a></li>
-                </ul>
+        <!-- NAVIGATION -->
+        <nav class="menu_categories">
+            <ul>
+                <li><a href = "Procucts.html">Alla spel</a></li>
+                <li class="active"><a href = "Categories.html">Kategorier</a></li>
+                <li><a href = "URL">Forum</a></li>
+                <li><a href = "URL">Låna</a></li>
+                <li><a href = "URL">Loppis</a></li>
+            </ul>
+            <ul>
+                <li id="search"><a href = "URL">Sök</a></li>
+            </ul>
                 
-                <div><i id="burger"><img src="src/menu.png" alt="menu" style="width:auto;height:auto;"></i></div>
-            </nav>
+            <div><i id="burger"><img src="src/menu.png" alt="menu" style="width:auto;height:auto;"></i></div>
+        </nav>
+            
+        <!-- CATEGORIES -->
+        <section class="display">
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat1.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
 
-            <!-- CATEGORIES -->
-            <section class="display">
-                <div class="responsive">
-                    <div class="gallery">
-                        <img src="src/kat1.png" alt="Forest" style="height:150px; width:250px">
-                        <div class="desc">
-                            <h1>Alla Spel</h1><br>
-                        </div>
-                    </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <img src="src/kat2.png" alt="Forest" style="height:150px; width:250px">
-                        <div class="desc">
-                            <h1>Barnspel</h1><br>
-                        </div>
-                    </div>
-                </div>                
-                <div class="responsive">
-                    <div class="gallery">
-                        <img src="src/kat3.png" alt="Forest" style="height:150px; width:250px">
-                        <div class="desc">
-                            <h1>Familjespel</h1><br>
-                        </div>                
-                    </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <img src="src/kat4.png" alt="Forest" style="height:150px; width:250px">
-                        <div class="desc">
-                            <h1>Kortspel</h1><br>
-                        </div>                
-                    </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <img src="src/kat5.png" alt="Forest" style="height:150px; width:250px">
-                        <div class="desc">
-                            <h1>Strategispel</h1><br>
-                        </div>                
-                    </div>
-                </div>
-            </section>
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat2.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
 
-            <!-- FOOTER -->
-            <footer class="footer">
-                <div id="adress">Hitta oss!</div>
-                <div id="contact">Kontakta oss!</div>
-                <div class="links">Följ oss!</div>
-            </footer>
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat3.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
 
-        </div> 
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat4.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat5.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat4.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat2.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+                <a href="Procucts.html"><img src="src/kat1.png" alt="kategori"></a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div id="adress">Hitta oss!</div>
+            <div id="contact">Kontakta oss!</div>
+            <div class="links">Följ oss!</div>
+        </footer>
+
+    <!--- END CONTAINER -->
+    </div> 
     </body>
 </html>
-
