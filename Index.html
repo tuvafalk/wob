@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Global.css" />   
     </head>
+   
     <body>
 
         <!--- CONTAINER -->
@@ -14,70 +15,74 @@
 
             <!-- HEADER -->
             <header class="header">
-                <figure id="logo"><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></figure>
-                <div id="quick_link">
-                    <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken" style="width:32;height:auto;"></i></a></div>
-                    <div class="icon"><a href = "URL"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto" style="width:32;height:auto;"></i></a></div>
-                    <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn" style="width:32;height:auto;"></i></a></div>
-                </div>    
+              <figure id="logo"><a href = "Index.html"></i><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></a></figure>
+              <div id="quick_link">
+                  <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken"></i></a></div>
+                  <div class="icon"><a href = "URL"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto"></i></a></div>
+                  <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn"></i></a></div>
+              </div>
             </header>
 
             <!-- NAVIGATION -->
             <nav class="menu">
                 <ul>
-                    <li><a href = "URL">Alla spel</a></li>
+                    <li><a href = "Procucts.html">Alla spel</a></li>
                     <li><a href = "Categories.html">Kategorier</a></li>
                     <li><a href = "URL">Forum</a></li>
                     <li><a href = "URL">Låna</a></li>
                     <li><a href = "URL">Loppis</a></li>
-                    <li><a href = "URL">Sök</a></li>
                 </ul>
-                
-                <div><i id="burger"><img src="src/menu.png" alt="menu" style="width:auto;height:auto;"></i></div>
+                <ul>
+                    <li id="search"><a href = "URL">Sök</a></li>
+                </ul>
+
+                <div><i id="burger"><img src="src/menu.png" alt="menu"></i></div>
             </nav>
 
             <!-- CONTENT -->
             <!-- TOPLIST -->
             <section class="toplist">
+              <h1>Topplistan</h1>
+
                 <div class="top_games">
                     <div class="number_text">1 / 10</div>
-                    <img src="src/loveletter.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/loveletter.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">2 / 10</div>
-                    <img src="src/bang.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/bang.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">3 / 10</div>
-                    <img src="src/catan.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/catan.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">4 / 10</div>
-                    <img src="src/tapestry.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/tapestry.png">
                 </div>
                 <div class="top_games">
                   <div class="number_text">5 / 10</div>
-                  <img src="src/7wondersduel.png" style="height:225px; width:536.25px">
+                  <img class="displayed_top_games" src="src/7wondersduel.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">6 / 10</div>
-                    <img src="src/onedeckdungeon.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/onedeckdungeon.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">7 / 10</div>
-                    <img src="src/arkhamhorror.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/arkhamhorror.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">8 / 10</div>
-                    <img src="src/houseonthehill.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/houseonthehill.png">
                 </div>
                 <div class="top_games">
                   <div class="number_text">9 / 10</div>
-                  <img src="src/wingspan.png" style="height:225px; width:536.25px">
+                  <img class="displayed_top_games" src="src/wingspan.png">
                 </div>
                 <div class="top_games">
                     <div class="number_text">10 / 10</div>
-                    <img src="src/thecrew.png" style="height:225px; width:536.25px">
+                    <img class="displayed_top_games" src="src/thecrew.png">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -86,34 +91,34 @@
                 <!-- thumbnails -->
                 <div class="row">
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_loveletter.png" style="width:auto" onclick="currentSlide(1)" alt="Love Letter">
+                      <img class="demo" src="src/thumbnail_loveletter.png" onclick="currentSlide(1)" alt="Love Letter">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_bang.png" style="width:auto" onclick="currentSlide(2)" alt="Bang!">
+                      <img class="demo" src="src/thumbnail_bang.png" onclick="currentSlide(2)" alt="Bang!">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_catan.png" style="width:auto" onclick="currentSlide(3)" alt="Catan">
+                      <img class="demo" src="src/thumbnail_catan.png" onclick="currentSlide(3)" alt="Catan">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_tapestry.png" style="width:auto" onclick="currentSlide(4)" alt="Tapestry">
+                      <img class="demo" src="src/thumbnail_tapestry.png" onclick="currentSlide(4)" alt="Tapestry">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_7wondersduel.png" style="width:auto" onclick="currentSlide(5)" alt="7 wonders duel">
+                      <img class="demo" src="src/thumbnail_7wondersduel.png" onclick="currentSlide(5)" alt="7 wonders duel">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_onedeckdungeon.png" style="width:auto" onclick="currentSlide(6)" alt="One deck dungeon">
+                      <img class="demo" src="src/thumbnail_onedeckdungeon.png" onclick="currentSlide(6)" alt="One deck dungeon">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_arkhamhorror.png" style="width:auto" onclick="currentSlide(7)" alt="Arkham Horror">
+                      <img class="demo" src="src/thumbnail_arkhamhorror.png" onclick="currentSlide(7)" alt="Arkham Horror">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_houseonthehill.png" style="width:auto" onclick="currentSlide(8)" alt="House on the hill">
+                      <img class="demo" src="src/thumbnail_houseonthehill.png" onclick="currentSlide(8)" alt="House on the hill">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_wingspan.png" style="width:auto" onclick="currentSlide(9)" alt="Wingspan">
+                      <img class="demo" src="src/thumbnail_wingspan.png" onclick="currentSlide(9)" alt="Wingspan">
                     </div>
                     <div class="column">
-                      <img class="demo cursor" src="src/thumbnail_thecrew.png" style="width:auto" onclick="currentSlide(10)" alt="The crew">
+                      <img class="demo" src="src/thumbnail_thecrew.png" onclick="currentSlide(10)" alt="The crew">
                     </div>
                 </div>
 
@@ -157,11 +162,97 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
             </section>
 
-            <aside class="sale">Erbjudanden</aside>
+            <aside class="sale">
+              <h1>Erbjudanden</h1>
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat4.png"><img src="src/kat1.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat5.png"><img src="src/kat2.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat1.png"><img src="src/kat3.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat2.png"><img src="src/kat4.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat3.png"><img src="src/kat5.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat3.png"><img src="src/kat4.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+              </div>
+    
+              <div class="clearfix"></div>
+            </aside>
 
-            <section class="chat">Forum inlägg<br>Forum inlägg<br>Forum inlägg<br>Forum inlägg<br>Forum inlägg<br></section>
-
-            <figure class="extra"><img src="src/color.png" alt="färgscheman" style="max-width:100%;height:auto;"></figure>
+            <section class="chat">
+              <table>
+                <tr>
+                  <th>Forum</th>
+                  <th>Ämne</th>
+                  <th>Senaste inlägget</th>
+                </tr>
+                <tr>
+                  <td>Allmänt om brädspel, kortspel och rollspel</td>
+                  <td>Allmänt</td>
+                  <td>Efter lyser ett familjebrädspel!</td>
+                </tr>
+                <tr>
+                  <td>Brädspel att spela på internet eller ladda ner</td>
+                  <td>Online</td>
+                  <td>Keyforge: Tokens</td>
+                </tr>
+                <tr>
+                  <td>Butiken i umeå</td>
+                  <td>Butiken</td>
+                  <td>Dessa spel kan du spela i butiken eller låna hem</td>
+                </tr>
+                <tr>
+                  <td>Förslag på sällskapsspel/brädspel som du saknar i butiken</td>
+                  <td>Butiken</td>
+                  <td>First Empires, Caesar's Empire, Orichalcum</td>
+                </tr>
+              </table>
+            </section>
+            <figure class="extra"><img src="src/color.png" alt="färgscheman"></figure>
 
             <!-- FOOTER -->
             <footer class="footer">
