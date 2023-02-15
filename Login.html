@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logga in / Skapa konto</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tuva Falk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Global.css" />   
+    </head>
+   
+    <body>
+
+        <!--- CONTAINER -->
+        <div class="container">
+
+            <!-- HEADER -->
+            <header class="header">
+              <figure id="logo"><a href = "Index.html"></i><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></a></figure>
+              <div id="quick_link">
+                  <div class="icon"><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken"></i></a></div>
+                  <div class="a_icon"><a href = "Login.html"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto"></i></a></div>
+                  <div class="icon"><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn"></i></a></div>
+              </div>
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="menu">
+                <ul>
+                  <li><a href = "Products.html">Alla spel</a></li>
+                  <li><a href = "Categories.html">Kategorier</a></li>
+                  <li><a href = "Forum.html">Forum</a></li>
+                  <li><a href = "URL">Låna</a></li>
+                  <li><a href = "URL">Loppis</a></li>
+                  <li id="search"><a href = "URL">Sök</a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu_responsive">
+              <ul>
+                <li><a href = "URL">Sök</a></li>
+                <li><a href = "Products.html">Alla spel</a></li>
+                <li><a href = "Categories.html">Kategorier</a></li>
+                <li><a href = "Forum.html">Forum</a></li>
+                <li><a href = "URL">Låna</a></li>
+                <li><a href = "URL">Loppis</a></li>
+                <li><a href = "URL"><i id="map"><img src="src/map.svg" alt="hitta till butiken"></i></a></li>
+                <li class="active"><a href = "Login.html"><i id="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto"></i></a></li>
+                <li><a href = "URL"><i id="cart"><img src="src/cart.svg" alt="din kundvagn"></i></a></li>
+              </ul>
+            </nav>
+
+            <!-- CONTENT -->
+            <!-- TOPLIST -->
+
+            <div class="login">
+              <h1>Logga in</h1>
+              <form action="/action_page.php">
+                <label for="email">E-Post:</label>
+                <input class="email" type="text" name="email" placeholder="Din e-post...">
+            
+                <label for="pasword">Lösenord:</label>
+                <input class="pasword" type="text" name="pasword" placeholder="Ditt lösenord..">
+              
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+
+            <div class="create_acount">
+              <h1>Skapa konto</h1>
+              <form action="/action_page.php">
+                <label for="fname">Användarnamn:</label>
+                <input class="username" type="text" name="username" placeholder="Ditt användarnamn...">
+            
+                <label for="fname">E-Post:</label>
+                <input class="email" type="text" name="email" placeholder="Din e-post...">
+
+                <label for="lname">Lösenord:</label>
+                <input class="pasword" type="text" name="pasword" placeholder="Ditt lösenord..">
+            
+                <label for="lname">Bekräfta lösenord:</label>
+                <input class="confirm_pasword" type="text" name="confirm_pasword" placeholder="Ditt lösenord..">
+              
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <!-- FOOTER -->
+            
+            <footer class="footer">
+              <div class="footer_info">bottom text</div>
+              <br>
+            </footer>
+  
+            
+        <!-- END CONTAINER -->
+        </div>
+    </body>
+</html>
