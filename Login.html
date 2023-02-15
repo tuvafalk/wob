@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Tuva Falk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="Global.css" />   
+        <link rel="stylesheet" type="text/css" href="Global.css">   
     </head>
    
     <body>
@@ -56,10 +56,10 @@
               <h1>Logga in</h1>
               <form action="/action_page.php">
                 <label for="email">E-Post:</label>
-                <input class="email" type="text" name="email" placeholder="Din e-post...">
+                <input id="email" type="text" name="email" required="required" placeholder="Din e-post...">
             
                 <label for="pasword">Lösenord:</label>
-                <input class="pasword" type="text" name="pasword" placeholder="Ditt lösenord..">
+                <input id="pasword" type="text" name="pasword" required="required" placeholder="Ditt lösenord..">
               
                 <input type="submit" value="Submit">
               </form>
@@ -68,18 +68,18 @@
 
             <div class="create_acount">
               <h1>Skapa konto</h1>
-              <form action="/action_page.php">
-                <label for="fname">Användarnamn:</label>
-                <input class="username" type="text" name="username" placeholder="Ditt användarnamn...">
+              <label for="myFirstName"> First Name:</label>
+                <label for="username">Användarnamn:</label>
+                <input id="username" type="text" name="username" required="required" placeholder="Ditt användarnamn...">
             
-                <label for="fname">E-Post:</label>
-                <input class="email" type="text" name="email" placeholder="Din e-post...">
+                <label for="email">E-Post:</label>
+                <input id="email" type="text" name="email" required="required" placeholder="Din e-post...">
 
-                <label for="lname">Lösenord:</label>
-                <input class="pasword" type="text" name="pasword" placeholder="Ditt lösenord..">
+                <label for="pasword">Lösenord:</label>
+                <input id="pasword" type="text" name="pasword" required="required" placeholder="Ditt lösenord..">
             
-                <label for="lname">Bekräfta lösenord:</label>
-                <input class="confirm_pasword" type="text" name="confirm_pasword" placeholder="Ditt lösenord..">
+                <label for="confirm_pasword">Bekräfta lösenord:</label>
+                <input id="confirm_pasword" type="text" name="confirm_pasword" required="required" placeholder="Ditt lösenord..">
               
                 <input type="submit" value="Submit">
               </form>
