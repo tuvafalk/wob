@@ -383,10 +383,9 @@ body {
         .container{
             display: grid;
             grid-template-columns: 1fr 75px 2fr 2fr 4fr 3fr 1fr 1fr 1fr;
-            grid-template-rows: 75px 75px 75px 75px auto 75px auto 1fr 1fr auto auto;
+            grid-template-rows: 75px 25px 75px 75px auto 75px auto 1fr 1fr auto auto;
         }
         .header, .about, .forum_smal, .toplist, .login, .create_acount { grid-column: 1 / 10; }
-        .header { grid-row: 1 / 2;}
         .forum_smal {display: block;}
         .forum_preview {display: none;}
         .toplist { grid-row: 3 / 7; }
@@ -407,7 +406,7 @@ body {
             width: 99.99999%; 
             margin: 6px 0; 
         }
-        .category_info { grid-row: 3 / 7; grid-column: 3 / 10; }
+        .category_info, .category_display, .forum { grid-row: 3 / 7; grid-column: 1 / 10; }
         .aside_products { display: none;}
         .login { grid-row: 3 / 6; }
         .create_acount { grid-row: 6 / 8; }
