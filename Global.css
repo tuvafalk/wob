@@ -386,6 +386,7 @@ body {
             grid-template-rows: 75px 75px 75px 75px auto 75px auto 1fr 1fr auto auto;
         }
         .header, .about, .forum_smal, .toplist, .login, .create_acount { grid-column: 1 / 10; }
+        .header { grid-row: 1 / 2;}
         .forum_smal {display: block;}
         .forum_preview {display: none;}
         .toplist { grid-row: 3 / 7; }
