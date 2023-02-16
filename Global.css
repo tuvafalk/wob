@@ -211,9 +211,10 @@ body {
         grid-row: 9 / 11;
     }
     .forum, .category_display {
-       grid-column: 3 / 10;
+       grid-column: 3 / 8;
        grid-row: 4 / 11;
     }
+    .category_display { grid-column: 3 / 10;}
     .forum_preview td, .forum_preview th, .forum td, .forum th, .forum_smal td, .forum_smal th {
         border: 1px solid #ddd;
         padding: 8px;
