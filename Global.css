@@ -26,8 +26,8 @@ body {
         float: left;
     }
     #quick_link { padding: 0px; float: right;}
-    .icon, .a_icon { display: inline-flex; padding: 10px; }
-    .icon:hover, .a_icon:hover, .a_icon { background-color: rgba(126, 126, 126, 0.3); }
+    .icon, .a_icon, .l_icon { display: inline-flex; padding: 10px; }
+    .icon:hover, .a_icon:hover, .l_icon:hover, .a_icon { background-color: rgba(126, 126, 126, 0.3); }
   
 /* MENU */
     .menu, .menu_responsive {
@@ -321,7 +321,7 @@ body {
             grid-template-rows: 75px 75px 75px 75px auto 75px auto 1fr 1fr auto auto;
         }
         #logo { width: 100%; }
-        .icon, .a_icon, .menu, .column, .aside_products { display: none; }
+        .icon, .l_icon, .a_icon, .menu, .column, .aside_products { display: none; }
         .displayed_top_games {
             height: auto; 
             max-width: 400px;
@@ -364,16 +364,17 @@ body {
 /* MOBILE RESPONSIVITY */
     @media screen and (max-width: 500px) {
         .container{
-            grid-template-rows: 75px 25px 75px 75px auto 75px auto 1fr 1fr auto auto;
+            grid-template-rows: 75px 30px 75px 75px auto 75px auto 1fr 1fr auto auto;
         }
 
         .displayed_top_games { width: 300px; }
-        .forum_smal { display: block; }
+        .forum_smal, .menu, .l_icon, .a_icon { display: block; }
         .forum_preview, .menu_responsive { display: none; }
 
-        .forum_smal, .toplist, .login, .create_acount, .category_info, .category_display, .product_display, .forum { grid-column: 1 / 10; }
+        .menu, .forum_smal, .toplist, .login, .create_acount, .category_info, .category_display, .product_display, .forum { grid-column: 1 / 10; }
         .display { grid-column: auto; }
 
+        .menu { grid-row: 2 / 3;}
         .category_display, .forum, .toplist { grid-row: 3 / 9; }
         .product_display { grid-row: 7 / 9;}
         .about { grid-row: 8 / 9; }
