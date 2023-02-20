@@ -375,7 +375,8 @@ body {
         .display { grid-column: auto; }
 
         .menu { grid-row: 2 / 3;}
-        .category_display, .forum, .toplist { grid-row: 3 / 11; }
+        .category_display, .forum { grid-row: 3 / 10;}
+        .toplist { grid-row: 3 / 9; }
         .product_display { grid-row: 7 / 11;}
         .about { grid-row: 8 / 9; }
         .forum_preview { grid-row: 9 / 10; }
