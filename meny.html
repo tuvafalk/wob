@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+    </head>
+    <body id="change">
+       
+        <button onclick="random_hex">Click</button>
+        
+        <h1>
+            the value for this hexcode is:
+            <script type="text/javascript">
+                document.write(hexcode1)
+            </script>
+            <br>
+            <script type="text/javascript">
+                document.write(hexcode2)
+            </script>
+        </h1>       
+
+        <script>
+            function random_hex () {
+                var hex_numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+                var hexcode1 = "";
+                var hexcode2 = "";
+                var random_index = 0;
+            
+                for(let i = 0 ; i < 6 ; i++) {
+                    random_index = Math.floor(Math.random() * hex_numbers.length);
+                    hexcode1 += hex_numbers[random_index];
+                    random_index = Math.floor(Math.random() * hex_numbers.length)
+                    hexcode2 += hex_numbers[random_index];
+                }
+                hexcode1 = "#"+hexcode1;
+                hexcode2 = "#"+hexcode2;
+                document.getElementById("change").style.backgroundColor = hexcode1;
+            }
+
+        </script>
+
+    </body>
+</html>
