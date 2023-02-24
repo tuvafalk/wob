@@ -43,8 +43,8 @@ function showSlides(n) {
 // Randomize a hexcode and set background to it
 function random_hex () {
     var hex_numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
-    var hexcode1 = "";
-    var hexcode2 = "";
+    var hexcode1 = "#";
+    var hexcode2 = "#";
     var random_index = 0;
 
     for(let i = 0 ; i < 6 ; i++) {
@@ -54,9 +54,7 @@ function random_hex () {
         hexcode2 += hex_numbers[random_index];
     }
 
-    hexcode1 = "#"+hexcode1;
-    hexcode2 = "#"+hexcode2;
-    
-    document.getElementById("change").style.backgroundColor = hexcode1; 
-    document.getElementsByTagName("header").style.backgroundColor = hexcode2; 
+    document.getElementById("change").style.backgroundImage = 'linear-gradient(' + hexcode1 + ', ' + hexcode2 + ')';
+    document.getElementsByClassName("header")[0].style.backgroundColor = hexcode1; 
+    document.getElementsByClassName("footer")[0].style.backgroundColor = hexcode2; 
 };

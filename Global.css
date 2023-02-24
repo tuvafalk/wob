@@ -60,7 +60,6 @@ body {
     .footer {
         grid-column: 1 / 10;
         grid-row: 11 / 12;
-        border-top: 10px solid #0C351F; border-bottom: 10px solid #0C351F;
         background: #dbdbdb;
         text-align: center;
         font-size: 1em;
