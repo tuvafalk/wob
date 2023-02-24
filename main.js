@@ -56,6 +56,7 @@ function random_hex () {
 
     hexcode1 = "#"+hexcode1;
     hexcode2 = "#"+hexcode2;
-
+    
     document.getElementById("change").style.backgroundColor = hexcode1; 
+    document.getElementsByTagName("header").style.backgroundColor = hexcode2; 
 };

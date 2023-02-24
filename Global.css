@@ -7,7 +7,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: 75px 75px 2fr 2fr 4fr 3fr 1fr 1fr 1fr;
-    grid-template-rows: 45px 45px 45px auto auto 75px auto 1fr 1fr auto auto;
+    grid-template-rows: 60px 60px 45px auto auto 75px auto 1fr 1fr auto auto;
     background:#dbdbdb; 
 }
 
@@ -45,7 +45,8 @@ body {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 16px;             
+        font-size: 16px;  
+        box-shadow: 0 0px 1px rgba(0,0,0,0.12);
     }
     .menu a:hover {
         background-color: #c7c7c7;
@@ -88,7 +89,7 @@ body {
         width: 100%;
         height: auto;
     }
-    .desc { text-align: center; }
+    .desc { text-align: center; color: #333;}
     .responsive {
         padding: 0 6px;
         width: 100%;
@@ -311,7 +312,7 @@ body {
     @media screen and (max-width: 820px) {
         .container{
             grid-template-columns: 1fr 75px 2fr 2fr 4fr 3fr 1fr 1fr 1fr;
-            grid-template-rows: 45px 45px 45px 75px 150px 75px auto 1fr 1fr 1fr auto;
+            grid-template-rows: 60px 60px minmax(45px, auto) 75px 150px 75px auto 1fr 1fr 1fr auto;
         }
         #logo { width: 100%; }
         .column, .aside_products, .menu a:not(:first-child) { display: none; }
@@ -334,7 +335,6 @@ body {
             display: block;
         }
         .menu.responsive { 
-            grid-row: 3/7;
             position: relative;
             margin: 0; 
             padding: 0;
@@ -378,7 +378,7 @@ body {
 /* MOBILE RESPONSIVITY */
     @media screen and (max-width: 500px) {
         .container{
-            grid-template-rows: 45px 45px 45px 75px auto 75px auto 1fr 1fr 1fr auto;
+            grid-template-rows: 60px 60px minmax(45px, auto) 75px auto 75px auto 1fr 1fr 1fr auto;
         }
 
         .displayed_top_games { width: 300px; }
