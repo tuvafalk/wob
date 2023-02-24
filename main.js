@@ -1,17 +1,16 @@
 // Change menu to responsive
 function topnav_resp() {
     var x = document.getElementById("myMenu");
+    
     if (x.className === "menu" ) {
       x.className += " responsive";
     } else {
       x.className = "menu";
     }
-    animated_icon(bar);
+
+    document.getElementsByClassName("bar").classList.toggle("change");
 }
 
-function animated_icon(x) {
-    x.classList.toggle("change");
-}
 
 // Next/previous controlls
 function plusSlides(n) {
