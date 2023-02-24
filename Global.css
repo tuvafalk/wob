@@ -32,14 +32,10 @@ body {
 /* MENU */
     .search input[type=text] {
         width: 80px;
-        box-sizing: border-box;
         border-radius: 4px;
         font-size: 14px;
-        background-color: white;
-        color: #c7c7c7;
-        background-image: url('searchicon.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
+        background-color: #dbdbdb;
+        color: #0C351F;
         padding: 5px 0 5px 20px;
         margin: 10px;
         -webkit-transition: width 0.4s ease-in-out;
@@ -47,15 +43,9 @@ body {
     }
     
     .search input[type=text]:focus {
-        width: 100%;
+        width: 94%;
         color: #0C351F;
-        margin: 10px;
         outline: #0C351F;
-    }
-
-    .menu .search {
-        float: right;
-        padding: 0;
     }
     .menu {
         grid-column: 1 / 10;
@@ -64,7 +54,7 @@ body {
         margin: 0; 
         padding: 0;
     }
-    .menu a {
+    .menu a, .menu .search {
         float: left;
         display: block;
         color: #0C351F;
@@ -74,7 +64,11 @@ body {
         font-size: 16px;  
         box-shadow: 0 0px 1px rgba(0,0,0,0.12);
     }
-    .menu a:hover, .menu a.active, .menu .search button:hover {
+    .menu .search {
+        float: right;
+        padding: 0;
+    }
+    .menu a:hover, .menu a.active {
         background-color: #c7c7c7;
         cursor: pointer;
     }
@@ -338,7 +332,7 @@ body {
             grid-template-rows: 60px 60px minmax(45px, auto) 75px 150px 75px auto 1fr 1fr 1fr auto;
         }
         #logo { width: 100%; }
-        .column, .aside_products, .menu a:not(:first-child) { display: none; }
+        .column, .aside_products, .menu a:not(:first-child), .menu .search { display: none; }
         
         .displayed_top_games {
             height: auto; 
@@ -369,7 +363,7 @@ body {
             top: 0;
         }
         .search {float: left;}
-        .menu.responsive a {
+        .menu.responsive a, .menu.responsive .search {
             float: none;
             display: block;
             text-align: left;
