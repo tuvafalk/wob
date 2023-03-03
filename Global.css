@@ -7,7 +7,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: 75px 75px 2fr 2fr 4fr 3fr 1fr 1fr 1fr;
-    grid-template-rows: 60px 60px 45px auto auto 75px auto 1fr 1fr auto auto;
+    grid-template-rows: 60px 60px minmax(45px, auto) auto auto 75px auto 1fr 1fr auto auto;
     background:#dbdbdb; 
 }
 
@@ -45,6 +45,7 @@ body {
     .search input[type=text]:focus {
         width: 94%;
         color: #0C351F;
+        background-color: white;
         outline: #0C351F;
     }
     .menu {
@@ -68,12 +69,37 @@ body {
         float: right;
         padding: 0;
     }
-    .menu a:hover, .menu a.active {
+    .menu a:hover, .menu a.active, .dropbtn:hover, .dropbtn:focus {
         background-color: #c7c7c7;
         cursor: pointer;
     }
     .menu .icon { display: none; }
     
+    .dropbtn, .dropdown-content a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif; color: #333;
+        background-color: #dbdbdb;
+        color: #0C351F;
+        padding: 14px 16px;
+        font-size: 16px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 0px 1px rgba(0,0,0,0.12);
+    }
+    .dropdown {
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #dbdbdb;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0 0px 1px rgba(0,0,0,0.12);
+        z-index: 1;
+    }
+    .dropdown a:hover, .dropdown-content a:hover {background-color: #ddd;}
+    .show {display: block;}
 /* FOOTER */
     .footer {
         grid-column: 1 / 10;
@@ -122,7 +148,7 @@ body {
         grid-row: 4 / 11;
         float: center;
     }
-    .product_display { grid-row: 7 / 11; }
+    .product_display, .category_display { grid-row: 7 / 11; }
     .buy {
         float: right;
         color: #dbdbdb;
@@ -427,4 +453,11 @@ body {
         .product_display { grid-row: 7 / 11;}
         .about { grid-row: 8 / 9; }
         .forum_preview { grid-row: 9 / 10; }
+    }
+
+    @media print {
+        .container { background-color: white; }
+        .menu, .menu.responsive, .extra, .row, .prev, .next, .footer, #quick_link, .sale, .toplist { display: none; }
+        .about { grid-row: 3 / 4; grid-column: 1 / 10;}
+        .forum_preview { grid-row: 6 / 8; grid-column: 1 / 10;}
     }
