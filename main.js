@@ -1,17 +1,43 @@
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("drop").classList.toggle("show");
+
+    var x = document.getElementById("drop");
+
+    if (x.className === "dropdown-content" ) {
+      x.className += " show";
+    } else {
+      x.className = "dropdown-content";
+    }
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+}
+
 // Change menu to responsive
 function topnav_resp() {
     var x = document.getElementById("myMenu");
+
     if (x.className === "menu" ) {
       x.className += " responsive";
     } else {
       x.className = "menu";
     }
-    animated_icon(bar);
+
+    document.getElementsByClassName("bar").classList.toggle("change");
 }
 
-function animated_icon(x) {
-    x.classList.toggle("change");
-}
 
 // Next/previous controlls
 function plusSlides(n) {
@@ -43,8 +69,8 @@ function showSlides(n) {
 // Randomize a hexcode and set background to it
 function random_hex () {
     var hex_numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
-    var hexcode1 = "";
-    var hexcode2 = "";
+    var hexcode1 = "#";
+    var hexcode2 = "#";
     var random_index = 0;
 
     for(let i = 0 ; i < 6 ; i++) {
@@ -54,9 +80,7 @@ function random_hex () {
         hexcode2 += hex_numbers[random_index];
     }
 
-    hexcode1 = "#"+hexcode1;
-    hexcode2 = "#"+hexcode2;
-    
-    document.getElementById("change").style.backgroundColor = hexcode1; 
-    document.getElementsByTagName("header").style.backgroundColor = hexcode2; 
+    document.getElementById("change").style.backgroundImage = 'linear-gradient(' + hexcode1 + ', ' + hexcode2 + ')';
+    document.getElementsByClassName("header")[0].style.backgroundColor = hexcode1; 
+    document.getElementsByClassName("footer")[0].style.backgroundColor = hexcode2; 
 };

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Tuva Falk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Global.css">   
+    <link rel="stylesheet" type="text/css" href="Global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="main.js"></script>
   </head>
@@ -31,9 +31,18 @@
         <a href="products.html">Alla Spel</a>
         <a href="categories.html">Kategorier</a>
         <a href="forum.html">Forum</a>
+        <div class="dropdown">
+          <button onclick="dropdown()" class="dropbtn">Rave</button>
+          <div id="drop" class="dropdown-content">
+            <div onclick="random_hex()">Header</div>
+            <div onclick="random_hex()">Body</div>
+            <div onclick="random_hex()">Footer</div>
+          </div>
+        </div>
+
         <a onclick="random_hex()">Rave</a>
-        <a id="search">Sök</a>
-        
+        <div class="search"><input type="text" name="search" placeholder="Sök"></div>
+
         <a href="javascript:void(0);" class="icon" onclick="topnav_resp()">
           <div class="bar" id="bar1"></div>
           <div class="bar" id="bar2"></div>
@@ -43,48 +52,60 @@
            
       <!-- CONTENT -->
       <!-- TOPLIST -->
-      <section class="toplist" id="change">
+      <section class="toplist">
         <h1>Topplistan</h1>
         
         <div class="top_games">
           <div class="number_text">1 / 10</div>
-          <img class="displayed_top_games" src="src/loveletter.png">
+          <img class="displayed_top_games" src="src/loveletter.png" alt="1. love letter">
+          <div class="toplist_desc">1. Love Letter </div>
         </div>
         <div class="top_games">
           <div class="number_text">2 / 10</div>
-          <img class="displayed_top_games" src="src/bang.png">
+          <img class="displayed_top_games" src="src/bang.png" alt="2. bang!">
+          <div class="toplist_desc">2. Bang! </div>
+
         </div>
         <div class="top_games">
           <div class="number_text">3 / 10</div>
-          <img class="displayed_top_games" src="src/catan.png">
+          <img class="displayed_top_games" src="src/catan.png" alt="3. catan">
+          <div class="toplist_desc">3. Catan</div>
         </div>
         <div class="top_games">
           <div class="number_text">4 / 10</div>
-          <img class="displayed_top_games" src="src/tapestry.png">
+          <img class="displayed_top_games" src="src/tapestry.png" alt="4. tapestry">
+          <div class="toplist_desc">4. Tapestry</div>
         </div>
         <div class="top_games">
           <div class="number_text">5 / 10</div>
-          <img class="displayed_top_games" src="src/7wondersduel.png">
+          <img class="displayed_top_games" src="src/7wondersduel.png" alt="5. 7 wonders duel">
+          <div class="toplist_desc">5. 7 Wonders Duel</div>
         </div>
         <div class="top_games">
           <div class="number_text">6 / 10</div>
-          <img class="displayed_top_games" src="src/onedeckdungeon.png">                
+          <img class="displayed_top_games" src="src/onedeckdungeon.png" alt="6. one deck dungeon">  
+          <div class="toplist_desc">6. One Deck Dungeon</div>              
         </div>
         <div class="top_games">
           <div class="number_text">7 / 10</div>
-          <img class="displayed_top_games" src="src/arkhamhorror.png">
+          <img class="displayed_top_games" src="src/arkhamhorror.png" alt="7. arkham horror">
+          <div class="toplist_desc">7. Arkham Horror</div>
         </div>
         <div class="top_games">
           <div class="number_text">8 / 10</div>
-          <img class="displayed_top_games" src="src/houseonthehill.png">
+          <img class="displayed_top_games" src="src/houseonthehill.png" alt="8. house on the hill">
+          <div class="toplist_desc">8. Betrayal at the House on the Hill</div>
+
         </div>
         <div class="top_games">
           <div class="number_text">9 / 10</div>
-          <img class="displayed_top_games" src="src/wingspan.png">
+          <img class="displayed_top_games" src="src/wingspan.png" alt="9. wingspan">
+          <div class="toplist_desc">9. Wingspan</div>
         </div>
         <div class="top_games">
           <div class="number_text">10 / 10</div>
-          <img class="displayed_top_games" src="src/thecrew.png">
+          <img class="displayed_top_games" src="src/thecrew.png" alt="10.the crew">
+          <div class="toplist_desc">10. The Crew</div>
         </div>
         <script>
           let slideIndex = 1;
@@ -145,56 +166,72 @@
         <div class="responsive">
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
-              <div class="desc">Add a description of the image here</div>
+              <div class="desc">
+                <button class="buy">Köp</button>
+              </div>
           </div>
         </div>
     
         <div class="responsive">
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">
+              <button class="buy">Köp</button>
+            </div>
           </div>
         </div>
 
         <div class="responsive">
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
-              <div class="desc">Add a description of the image here</div>
+              <div class="desc">                
+                <button class="buy">Köp</button>
+              </div>
           </div>
         </div>
     
         <div class="responsive">
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">                
+              <button class="buy">Köp</button>
+            </div>
           </div>
         </div>
     
         <div class="responsive">
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
-              <div class="desc">Add a description of the image here</div>
+              <div class="desc">                
+                <button class="buy">Köp</button>
+              </div>
           </div>
         </div>
     
         <div class="responsive">
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">
+              <button class="buy">Köp</button>
+            </div>
           </div>
         </div>
 
         <div class="responsive">
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
-              <div class="desc">Add a description of the image here</div>
+              <div class="desc">
+                <button class="buy">Köp</button>
+              </div>
           </div>
         </div>
     
         <div class="responsive">
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">
+              <button class="buy">Köp</button>
+            </div>
           </div>
         </div>
     
@@ -252,7 +289,7 @@
         </tr>
       </table>
             
-      <aside class="extra">
+      <aside class="extra" id="change">
               
       <video  autoplay muted controls loop>
       <source src="src/dice.mp4" type="video/mp4">
