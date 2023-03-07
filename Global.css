@@ -25,6 +25,7 @@ body {
         width: 75%; 
         float: left;
     }
+    
     #quick_link { padding: 0px; float: right; display: inline-flex;}
     #quick_link a { padding: 10px; }
     #quick_link a:hover { background-color: rgba(126, 126, 126, 0.3); }
@@ -114,9 +115,11 @@ body {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 2em;
         color: #fff;
+        grid-column: 3 / 8;
     }
+    .draggable, .down { width: 20px; height: 20px; }
 
-    p { margin: 6px; }
+    p { margin: 5px; }
 /* COMMON FEATURES */
 /* GALLERY DISPLAY */
 /* fit 4 blocks accross page */
@@ -148,14 +151,15 @@ body {
         grid-row: 4 / 11;
         float: center;
     }
-    .product_display, .category_display { grid-row: 7 / 11; }
+    .product_display h2 { font-size: 1em; }
+    .product_display { grid-row: 7 / 11; }
     .buy {
         float: right;
         color: #dbdbdb;
         background-color: #333;
         border-radius: 8px;
-        font-size: 14px;
-        text-decoration: none;        
+        text-decoration: none;     
+        font-family: 'Courier New', Courier, monospace;   
         font-size: 16px;
         margin: 6px;
     }
@@ -425,14 +429,13 @@ body {
             
         .forum_preview, .sale, .extra, .about { grid-column: 1 / 10; }
         .forum, .category_info { grid-column: 2 / 9; }
-        .category_display { grid-column: 2 / 10;}
         .login, .create_acount { grid-column: 2 / 9; }
 
         .forum_preview, .about { grid-row: auto; }
-        .login { grid-row: 4 / 6; }
+        .login { grid-row: 4 / 8; }
         .category_info, .toplist {  grid-row: 4 / 7;  }
         .forum, .category_display { grid-row: 4 / 11; }
-        .create_acount { grid-row: 6 / 10; }
+        .create_acount { grid-row: 8 / 11; }
         .sale { grid-row: 7 / 8; }
         .extra { grid-row: 10 / 11; }
     }
@@ -444,15 +447,9 @@ body {
 
         .displayed_top_games { width: 300px; }
         .forum_smal, .l_icon, .a_icon { display: block; }
-        .forum_preview, .menu_responsive { display: none; }
+        .forum_preview { display: none; }
 
-        .forum_smal, .toplist, .login, .create_acount, .category_info, .category_display, .product_display, .forum { grid-column: 1 / 10; }
-        .display { grid-column: auto; }
-
-        .category_display, .forum { grid-row: 3 / 10;}
-        .product_display { grid-row: 7 / 11;}
-        .about { grid-row: 8 / 9; }
-        .forum_preview { grid-row: 9 / 10; }
+        .forum, .forum_smal, .sale, .category_display, .product_display { grid-column: 1 / 10;}
     }
 
     @media print {

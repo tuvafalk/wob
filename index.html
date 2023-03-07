@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="main.js"></script>
   </head>
    
@@ -16,12 +18,13 @@
     <div class="container">
 
       <!-- HEADER -->
-      <header class="header">
+      <header class="header" id="header">
         <figure id="logo"><a href = "index.html"><img src="src/logo.svg" alt="world of board games logotyp" style="max-width:90%;height:auto;"></a></figure>
         <div id="quick_link">
           <a target="_blank" href = "https://www.google.com/maps/place/Worldofboardgames.com/@63.8482097,20.3114261,15z/data=!4m2!3m1!1s0x0:0xc047bbd27173880b?sa=X&ved=2ahUKEwjF4LnVm6T9AhXL6CoKHWpSAYYQ_BJ6BAhxEAg"><i class="map"><img src="src/map.svg" alt="hitta till butiken"></i></a>
           <a href = "Login.html"><i class="knight"><img src="src/logg-in.svg" alt="logga in eller skapa konto"></i></a>
           <a href = "URL"><i class="cart"><img src="src/cart.svg" alt="din kundvagn"></i></a>
+          <a href="#footer"><i class="down"><img src="src/down.svg" alt="button to footer"></i></a>
         </div>
       </header>
 
@@ -31,15 +34,6 @@
         <a href="products.html">Alla Spel</a>
         <a href="categories.html">Kategorier</a>
         <a href="forum.html">Forum</a>
-        <div class="dropdown">
-          <button onclick="dropdown()" class="dropbtn">Rave</button>
-          <div id="drop" class="dropdown-content">
-            <div onclick="random_hex()">Header</div>
-            <div onclick="random_hex()">Body</div>
-            <div onclick="random_hex()">Footer</div>
-          </div>
-        </div>
-
         <a onclick="random_hex()">Rave</a>
         <div class="search"><input type="text" name="search" placeholder="Sök"></div>
 
@@ -58,12 +52,12 @@
         <div class="top_games">
           <div class="number_text">1 / 10</div>
           <img class="displayed_top_games" src="src/loveletter.png" alt="1. love letter">
-          <div class="toplist_desc">1. Love Letter </div>
+          <div class="toplist_desc" onmouseover="mOver1(this)" onmouseout="mOut1(this)">1. Love Letter</div>
         </div>
         <div class="top_games">
           <div class="number_text">2 / 10</div>
           <img class="displayed_top_games" src="src/bang.png" alt="2. bang!">
-          <div class="toplist_desc">2. Bang! </div>
+          <div class="toplist_desc" onmouseover="mOver2(this)" onmouseout="mOut2(this)">2. Bang! </div>
 
         </div>
         <div class="top_games">
@@ -167,7 +161,7 @@
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
               <div class="desc">
-                <button class="buy">Köp</button>
+                <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
               </div>
           </div>
         </div>
@@ -176,7 +170,7 @@
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
             <div class="desc">
-              <button class="buy">Köp</button>
+              <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
             </div>
           </div>
         </div>
@@ -185,7 +179,7 @@
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
               <div class="desc">                
-                <button class="buy">Köp</button>
+                <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
               </div>
           </div>
         </div>
@@ -194,7 +188,7 @@
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
             <div class="desc">                
-              <button class="buy">Köp</button>
+              <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
             </div>
           </div>
         </div>
@@ -203,7 +197,7 @@
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
               <div class="desc">                
-                <button class="buy">Köp</button>
+                <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
               </div>
           </div>
         </div>
@@ -212,7 +206,7 @@
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
             <div class="desc">
-              <button class="buy">Köp</button>
+              <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
             </div>
           </div>
         </div>
@@ -221,7 +215,7 @@
           <div class="gallery">
               <a target="_blank" href="src/kat4.png"><img src="src/kat5.png" alt="kategori"></a>
               <div class="desc">
-                <button class="buy">Köp</button>
+                <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
               </div>
           </div>
         </div>
@@ -230,7 +224,7 @@
           <div class="gallery">
             <a target="_blank" href="src/kat5.png"><img src="src/kat1.png" alt="kategori"></a>
             <div class="desc">
-              <button class="buy">Köp</button>
+              <button class="buy" onclick="this.innerHTML='I korgen!'">Köp</button>
             </div>
           </div>
         </div>
@@ -298,12 +292,23 @@
       </aside>
 
       <!-- FOOTER -->
-      <footer class="footer">
+      <footer class="footer" id="footer">
+        <a href="#header"><i class="up"><img src="src/up.svg" alt="button to header"></i></a>
         <div class="footer_info">
-          <a target="_blank" href="https://www.google.com/maps/place/Worldofboardgames.com/@63.8482097,20.3114261,15z/data=!4m2!3m1!1s0x0:0xc047bbd27173880b?sa=X&ved=2ahUKEwjF4LnVm6T9AhXL6CoKHWpSAYYQ_BJ6BAhxEAg">Hitta oss!</a>
-          <br><a target="_blank" href="https://www.facebook.com/worldofboardgames/">Följ oss!</a>
-          <br><a target="_blank" href="https://www.worldofboardgames.com/om_oss.php">Kontakat oss!</a>
+          <a target="_blank" href="https://www.google.com/maps/place/Worldofboardgames.com/@63.8482097,20.3114261,15z/data=!4m2!3m1!1s0x0:0xc047bbd27173880b?sa=X&ved=2ahUKEwjF4LnVm6T9AhXL6CoKHWpSAYYQ_BJ6BAhxEAg">
+            <img class="draggable" src="src/map.svg" alt="hitta till butiken">
+            Hitta oss!
+          </a>
+          <br><a target="_blank" href="https://www.facebook.com/worldofboardgames/">
+            <img class="draggable" src="src/face.png" alt="följ world of boardgames på facebook">
+            Följ oss!
+          </a>
+          <br><a target="_blank" href="https://www.worldofboardgames.com/om_oss.php">
+            <img class="draggable" src="src/kontakt.png" alt="Kontakta world of boardgames">
+            Kontakta oss!
+          </a>
         </div>
+       
       </footer>
   
             

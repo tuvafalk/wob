@@ -1,16 +1,3 @@
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("drop").classList.toggle("show");
-
-    var x = document.getElementById("drop");
-
-    if (x.className === "dropdown-content" ) {
-      x.className += " show";
-    } else {
-      x.className = "dropdown-content";
-    }
-}
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -47,7 +34,8 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-                    
+               
+// display correct slide
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("top_games");
@@ -84,3 +72,46 @@ function random_hex () {
     document.getElementsByClassName("header")[0].style.backgroundColor = hexcode1; 
     document.getElementsByClassName("footer")[0].style.backgroundColor = hexcode2; 
 };
+
+// display description on hover
+function mOver1(obj) {
+  obj.innerHTML = "Love Letter är ett enkelt kortbaserat spel om kärleksintriger där varje spelare skall försöka leverera ett kärleksbrev till en prinsessa."
+}
+
+function mOut1(obj) {
+  obj.innerHTML = "1. Love Letter"
+}
+
+function mOver2(obj) {
+  obj.innerHTML = "Bang! är en vilda western duell i kortspelsformat."
+}
+
+function mOut2(obj) {
+  obj.innerHTML = "2. Bang!"
+}
+
+// smooth scroll between header and footer
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+// draggable objects in footer
+$(document).ready(function() {
+  $(document.getElementsByClassName("draggable")).draggable({containment: ".footer"})
+});
