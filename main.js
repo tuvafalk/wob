@@ -40,18 +40,12 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("top_games");
     let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
     slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
 // Randomize a hexcode and set background to it
@@ -104,10 +98,23 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
+  });
+});
+
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
   });
 });
 
